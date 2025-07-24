@@ -1,0 +1,13 @@
+section {
+  color: var(--font-color-1);
+  width: fit-content;
+  border: 1px solid var(--border-color-1);
+  border-radius: 15px;
+  padding: 10px;
+  margin: 5px;
+  box-shadow: var(--box-shadow-1);
+}
+
+ul {
+  padding: 0;
+}

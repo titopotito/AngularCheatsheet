@@ -1,0 +1,10 @@
+li {
+  color: var(--font-color-2);
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+li:hover {
+  color: var(--font-color-1);
+  cursor: pointer;
+}

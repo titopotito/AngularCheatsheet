@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  background-color: #0f0f11;
+}
+
+h1 {
+  color: var(--font-color-1);
+}
+
+:root {
+  --font-color-1: rgb(251, 251, 251);
+  --font-color-2: rgb(251, 251, 251, 0.6);
+
+  --border-color-1: rgb(116, 110, 124);
+
+  --box-shadow-1: 0 5px 10px 3px rgb(87 101 128 / 12%);
+}
