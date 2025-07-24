@@ -1,17 +1,80 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --font-family-1: "Inter Tight", sans-serif;
+  --font-color-1: rgb(251, 251, 251);
+  --font-color-2: rgb(251, 251, 251, 0.6);
+  --background-color-1: #0f0f11;
+  --background-color-2: #24292e;
+  --border-color-1: rgb(116, 110, 124);
+  --box-shadow-1: 0 5px 10px 3px rgb(87 101 128 / 12%);
+}
+
 body {
-  background-color: #0f0f11;
+  font-family: var(--font-family-1);
+  background-color: var(--background-color-1);
 }
 
 h1 {
   color: var(--font-color-1);
 }
 
-:root {
-  --font-color-1: rgb(251, 251, 251);
-  --font-color-2: rgb(251, 251, 251, 0.6);
+.codeblock {
+  background-color: var(--background-color-2);
+  border: 1px solid var(--border-color-1);
+  border-radius: 10px;
+  line-height: 20px;
+}
 
-  --border-color-1: rgb(116, 110, 124);
+code {
+  font-family: "Fira Code", monospace;
+  font-size: small;
+  background-color: var(--background-color-2);
+}
 
-  --box-shadow-1: 0 5px 10px 3px rgb(87 101 128 / 12%);
+.hljs {
+  background-color: var(--background-color-2);
+  margin: 1em;
+  padding: 0;
+  color: var(--font-color-1);
+}
+
+pre code.hljs {
+  margin: 1em;
+  padding: 0;
+}
+
+.hljs-comment {
+  color: green;
+}
+
+.hljs-deletion,
+.hljs-number,
+.hljs-quote,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-template-tag,
+.hljs-type {
+  color: cyan;
+}
+
+.hljs-section,
+.hljs-title {
+  color: cyan;
+}
+
+.hljs-link,
+.hljs-operator,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable {
+  color: red;
+}
+
+.hljs-meta {
+  color: skyblue;
 }

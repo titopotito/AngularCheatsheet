@@ -1,42 +1,14 @@
 
-
 <main class="main">
   <h1>Angular Cheatsheet</h1>
-
-  <cs-basic-container>
-    <h2 header>Set-up</h2>
-    <cs-list-item list-item>ng new &lt;project-name&gt;</cs-list-item>
-    <cs-list-item list-item>npm start</cs-list-item>
-  </cs-basic-container>
-
-  <cs-basic-container>
-    <h2 header>Component</h2>
-    <cs-list-item list-item>selector</cs-list-item>
-    <cs-list-item list-item>template</cs-list-item>
-    <cs-list-item list-item>templateUrl</cs-list-item>
-    <cs-list-item list-item>style</cs-list-item>
-    <cs-list-item list-item>styleUrl</cs-list-item>
-    <cs-list-item list-item>host</cs-list-item>
-    <cs-list-item list-item>imports</cs-list-item>
-  </cs-basic-container>
-
-  <cs-basic-container>
-    <h2 header>Lifecycle Hooks</h2>
-    <cs-list-item list-item>ngOnInit</cs-list-item>
-    <cs-list-item list-item>ngOnChanges</cs-list-item>
-    <cs-list-item list-item>ngDoCheck</cs-list-item>
-    <cs-list-item list-item>ngAfterContentInit</cs-list-item>
-    <cs-list-item list-item>ngAfterContentChecked</cs-list-item>
-    <cs-list-item list-item>ngAfterViewInit</cs-list-item>
-    <cs-list-item list-item>ngAfterViewChecked</cs-list-item>
-    <cs-list-item list-item>ngAfterNextRender</cs-list-item>
-    <cs-list-item list-item>ngAfterEveryRender</cs-list-item>
-    <cs-list-item list-item>ngOnDestroy</cs-list-item>
-  </cs-basic-container>
-  
+  <section>
+    <topic-set-up class="set-up"></topic-set-up>
+    <topic-component class="component"></topic-component>
+    <topic-control-flow class="control-flow"></topic-control-flow>
+    <topic-structural-directives class="structural-directives"></topic-structural-directives>
+    <topic-data-binding class="data-binding"></topic-data-binding>
+    <topic-lifecycle-hooks class="lifecycle-hooks"></topic-lifecycle-hooks>
+  </section>
 </main>
-
-
-
 
 <router-outlet />

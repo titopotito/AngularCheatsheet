@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'cs-list-item',
+  selector: 'sh-list-item',
   template: `<li>
     <ng-content></ng-content>
   </li>`,
-  styleUrl: 'cs-list-item.css',
+  styleUrl: 'sh-list-item.css',
 })
 export class ListItem {}

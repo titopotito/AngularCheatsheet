@@ -1,0 +1,41 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+}
+
+main section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "set-up set-up control-flow control-flow control-flow control-flow"
+    "component component control-flow control-flow control-flow control-flow"
+    "component component control-flow control-flow control-flow control-flow"
+    "component component lifecycle-hooks lifecycle-hooks data-binding data-binding"
+    "structural-directives structural-directives lifecycle-hooks lifecycle-hooks data-binding data-binding";
+  max-width: 1200px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.set-up {
+  grid-area: set-up;
+}
+.component {
+  grid-area: component;
+}
+.control-flow {
+  grid-area: control-flow;
+}
+.structural-directives {
+  grid-area: structural-directives;
+}
+.data-binding {
+  grid-area: data-binding;
+}
+.lifecycle-hooks {
+  grid-area: lifecycle-hooks;
+}

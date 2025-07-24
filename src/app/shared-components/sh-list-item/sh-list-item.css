@@ -2,6 +2,7 @@ li {
   color: var(--font-color-2);
   list-style: none;
   margin-bottom: 2px;
+  text-wrap: nowrap;
 }
 
 li:hover {
