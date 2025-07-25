@@ -3,9 +3,11 @@ li {
   list-style: none;
   margin-bottom: 2px;
   text-wrap: nowrap;
+  padding: 5px;
 }
 
 li:hover {
   color: var(--font-color-1);
   cursor: pointer;
+  background-color: var(--background-color-2);
 }
