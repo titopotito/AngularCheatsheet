@@ -1,26 +1,20 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { TopicComponent } from './main-components/topic-component/topic-component';
-import { TopicSetUp } from './main-components/topic-set-up/topic-set-up';
-import { TopicStructuralDirectives } from './main-components/topic-structural-directives/topic-structural-directives';
-import { TopicLifecycleHooks } from './main-components/topic-lifecycle-hooks/topic-lifecycle-hooks';
-import { TopicDataBinding } from './main-components/topic-data-binding/topic-data-binding';
-import { TopicControlFlow } from './main-components/topic-control-flow/topic-control-flow';
+import { PageIntroduction } from './pages/introduction.component';
+import { SharedThemeToggleButton } from './shared/theme-toggle-button/theme-toggle-button.component';
+
+type StyleTheme = 'dark' | 'light';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    TopicComponent,
-    TopicSetUp,
-    TopicStructuralDirectives,
-    TopicLifecycleHooks,
-    TopicDataBinding,
-    TopicControlFlow,
-  ],
+  imports: [RouterOutlet, SharedThemeToggleButton, PageIntroduction],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('AngularCheatsheet');
+  theme = signal<StyleTheme>('dark');
+  changeTheme(theme: StyleTheme) {
+    this.theme.set(theme);
+  }
 }
