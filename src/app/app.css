@@ -22,8 +22,14 @@ main.dark {
 
 #main-nav {
   grid-area: nav;
+  padding: 10px;
 }
 
 #main-content {
   grid-area: content;
+  padding: 10px;
+}
+
+#main-nav ul {
+  padding-left: 0;
 }

@@ -1,0 +1,36 @@
+li {
+  list-style: none;
+}
+
+li:hover {
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+li a {
+  padding: 10px;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  text-wrap: nowrap;
+}
+
+li.dark a {
+  color: var(--font-color-2);
+}
+
+li.light a {
+  color: var(--font-color-3);
+}
+
+li:hover a {
+  color: var(--font-color-1);
+}
+
+li.dark:hover {
+  background-color: var(--background-color-2);
+}
+
+li.light:hover {
+  background-color: var(--background-color-2);
+}

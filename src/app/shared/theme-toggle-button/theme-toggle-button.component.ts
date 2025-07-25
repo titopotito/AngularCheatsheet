@@ -1,4 +1,8 @@
-import { Component, output } from '@angular/core';
+import { Component } from '@angular/core';
+import {
+  StyleThemeService,
+  StyleThemeType,
+} from '../../services/style-theme.services';
 
 @Component({
   selector: 'shared-theme-toggle-button',
@@ -21,8 +25,9 @@ import { Component, output } from '@angular/core';
   </div>`,
 })
 export class SharedThemeToggleButton {
-  theme = output<'dark' | 'light'>();
-  changeTheme(theme: 'dark' | 'light') {
-    this.theme.emit(theme);
+  constructor(public styleThemeService: StyleThemeService) {}
+
+  changeTheme(theme: StyleThemeType) {
+    this.styleThemeService.changeStyleTheme(theme);
   }
 }

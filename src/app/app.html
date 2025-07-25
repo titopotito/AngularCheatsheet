@@ -1,26 +1,26 @@
 
-<main [class]="theme()">
+<main class="{{styleThemeService.styleTheme()}}">
   <div>
-    <h1 id="main-header">Angular Cheatsheet <shared-theme-toggle-button (theme)="changeTheme($event)"></shared-theme-toggle-button></h1>
+    <h1 id="main-header">Angular Cheatsheet <shared-theme-toggle-button></shared-theme-toggle-button></h1>
     <nav id="main-nav">
       <section>
         <h2>Introduction</h2>
         <ul>
-          <li>What is Angular?</li>
-          <li>Installation</li>
+          <shared-link-list link="/introduction">What is Angular?</shared-link-list>
+          <shared-link-list link="/">Installation</shared-link-list>
         </ul>
       </section>
       <section>
         <h2>In-Depth Guide</h2>
         <ul>
-          <li>Signals</li>
-          <li>Components</li>
-          <li>Templates</li>
-          <li>Directives</li>
-          <li>Dependency Injection</li>
-          <li>Routing</li>
-          <li>Forms</li>
-          <li>HTTP Client</li>
+          <shared-link-list link="/">Signals</shared-link-list>
+          <shared-link-list link="/">Components</shared-link-list>
+          <shared-link-list link="/">Templates</shared-link-list>
+          <shared-link-list link="/">Directives</shared-link-list>
+          <shared-link-list link="/">Dependency Injection</shared-link-list>
+          <shared-link-list link="/">Routing</shared-link-list>
+          <shared-link-list link="/">Forms</shared-link-list>
+          <shared-link-list link="/">HTTP Client</shared-link-list>
         </ul>
       </section>
     </nav>
