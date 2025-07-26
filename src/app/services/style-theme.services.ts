@@ -1,4 +1,4 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, WritableSignal } from '@angular/core';
 
 export type StyleThemeType = 'dark' | 'light';
 
@@ -6,9 +6,17 @@ export type StyleThemeType = 'dark' | 'light';
   providedIn: 'root',
 })
 export class StyleThemeService {
-  styleTheme = signal<StyleThemeType>('dark');
+  private DEFAULT_THEME: StyleThemeType = 'dark';
 
-  changeStyleTheme(theme: StyleThemeType) {
+  styleTheme: WritableSignal<StyleThemeType> = signal<StyleThemeType>(
+    this.DEFAULT_THEME
+  );
+
+  changeStyleTheme(theme: StyleThemeType): void {
     this.styleTheme.set(theme);
+  }
+
+  isDarkMode(): boolean {
+    return this.styleTheme() === 'dark' ? true : false;
   }
 }

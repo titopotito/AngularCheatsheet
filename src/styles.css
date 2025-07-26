@@ -9,6 +9,16 @@
   --background-color-2: #24292e;
   --border-color-1: rgb(116, 110, 124);
   --box-shadow-1: 0 5px 10px 3px rgb(87 101 128 / 12%);
+
+  /* this part is used by style them button */
+  --hue: 223;
+  --bg: hsl(var(--hue), 10%, 90%);
+  --fg: hsl(var(--hue), 10%, 10%);
+  --primary: hsl(var(--hue), 90%, 50%);
+  --trans-dur: 0.3s;
+  --trans-timing: cubic-bezier(0.76, 0.05, 0.24, 0.95);
+  --trans-timing-in: cubic-bezier(0.76, 0.05, 0.86, 0.06);
+  --trans-timing-out: cubic-bezier(0.05, 0.76, 0.06, 0.86);
 }
 
 body {
