@@ -27,6 +27,8 @@ code {
   font-family: "Fira Code", monospace;
   font-size: small;
   background-color: var(--background-color-2);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
 }
 
 .hljs {

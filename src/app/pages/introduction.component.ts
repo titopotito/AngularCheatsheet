@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'page-introduction',
-  template: `<h2 #header>What is Angular?</h2>
+  template: `<h2>What is Angular?</h2>
     <p>
       Angular is a web framework that empowers developers to build fast,
       reliable applications.
