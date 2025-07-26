@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+@import "highlight.js/styles/github.css";
 
 :root {
   --font-family-1: "Inter Tight", sans-serif;
@@ -31,64 +32,10 @@ p {
   font-size: 0.9rem;
 }
 
-.codeblock {
-  background-color: var(--background-color-2);
-  border: 1px solid var(--border-color-1);
-  border-radius: 10px;
-  line-height: 20px;
-}
-
 code {
   font-family: "Fira Code", monospace;
   font-size: small;
   background-color: var(--background-color-2);
   font-size: 0.9rem;
   line-height: 1.5rem;
-}
-
-.hljs {
-  background-color: var(--background-color-2);
-  margin: 1em;
-  padding: 0;
-  color: var(--font-color-1);
-}
-
-pre code.hljs {
-  margin: 1em;
-  padding: 0;
-}
-
-.hljs-comment {
-  color: green;
-}
-
-.hljs-deletion,
-.hljs-number,
-.hljs-quote,
-.hljs-selector-class,
-.hljs-selector-id,
-.hljs-string,
-.hljs-template-tag,
-.hljs-type {
-  color: cyan;
-}
-
-.hljs-section,
-.hljs-title {
-  color: cyan;
-}
-
-.hljs-link,
-.hljs-operator,
-.hljs-regexp,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-symbol,
-.hljs-template-variable,
-.hljs-variable {
-  color: red;
-}
-
-.hljs-meta {
-  color: skyblue;
 }

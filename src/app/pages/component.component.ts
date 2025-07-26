@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { Highlight } from 'ngx-highlightjs';
 
 @Component({
-  imports: [CommonModule],
+  imports: [CommonModule, Highlight],
   selector: 'page-component',
   styles: [
     `
@@ -47,15 +48,7 @@ import { Component } from '@angular/core';
       </tbody>
     </table>
     <h3>Example:</h3>
-    <pre class="codeblock"><code ngNonBindable>&#64;Component(&#123;
-  selector: 'my-component',
-  standalone: true,
-  imports: [CommonModule],
-  template: &#96;&lt;h1&gt;&#123;&#123; title &#125;&#125;&lt;/h1&gt;&#96;
-&#125;)
-export class MyComponent &#123;
-  title = 'Hello Angular';
-&#125;</code></pre>
+    <pre><code [highlight]='code1' language="typescript"></code></pre>
   `,
 })
 export class PageComponent {
@@ -134,4 +127,14 @@ export class PageComponent {
       'Used for resolving relative paths (legacy; not often needed now).',
     ],
   ];
+
+  code1 = `@Component({
+  selector: 'my-component',
+  standalone: true,
+  imports: [CommonModule],
+  template: ${'`<h1>{{ title }}</h1>`'}
+})
+export class MyComponent {
+  title = 'Hello Angular';
+}`;
 }

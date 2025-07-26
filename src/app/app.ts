@@ -11,6 +11,6 @@ import { SharedStyleThemeButton } from './shared/style-theme-button/style-theme-
   styleUrl: './app.css',
 })
 export class App {
-  protected readonly title = signal('AngularCheatsheet');
+  protected readonly title = signal('Angular Cheatsheet');
   constructor(public styleThemeService: StyleThemeService) {}
 }

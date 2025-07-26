@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { Highlight } from 'ngx-highlightjs';
 
 @Component({
+  imports: [Highlight],
   selector: 'page-injectable',
   template: `
     <h2>&#64;Injectable</h2>
@@ -15,46 +17,46 @@ import { Component } from '@angular/core';
       "root" injector) during the application bootstrap process.
     </p>
     <h3>Creating an Injectable Service</h3>
-    <pre
-      class="codeblock"
-    ><code>import &#123; Injectable &#125; from '&#64;angular/core';
-import &#123; DATA &#125; from './sample-data';
-
-&#64;Injectable(&#123;
-  // declares that this service should be created
-  // by the root application injector.
-  providedIn: 'root',
-&#125;)
-export class ExampleDataService &#123;
-  getData() &#123;
-    return DATA;
-  &#125;
-&#125;</code></pre>
+    <pre><code [highlight]="code1" language="typescript"></code></pre>
     <h3>Injecting Services</h3>
     <p>
       The inject method can be used in both classes and functions, while the
       constructor method can naturally only be used in a class constructor.
     </p>
     <h4>1. Using <code>inject</code></h4>
-    <pre
-      class="codeblock"
-    ><code >import &#123; inject, Component &#125; from "&#64;angular/core";
-import &#123; ExampleDataService &#125; from "./exampledataservice.services.ts";
+    <pre><code [highlight]="code2" language="typescript"></code></pre>
 
-&#64;Component(&#123;...&#125;)
-export class SomeComponent &#123;
-  private dataService = inject(ExampleDataService);
-&#125;</code></pre>
-    <h4>1. Using constructor method</h4>
-    <pre
-      class="codeblock"
-    ><code >import &#123; Component &#125; from "&#64;angular/core";
-import &#123; ExampleDataService &#125; from "./exampledataservice.services.ts";
-
-&#64;Component(&#123;...&#125;)
-export class SomeComponent &#123;
-  constructor(private dataService: ExampleDataService)
-&#125;</code></pre>
+    <h4>2. Using constructor method</h4>
+    <pre><code [highlight]="code3" language="typescript"></code></pre>
   `,
 })
-export class PageInjectable {}
+export class PageInjectable {
+  code1 = `import { Injectable } from '@angular/core';
+import { DATA } from './sample-data';
+
+@Injectable({
+  // declares that this service should be created
+  // by the root application injector.
+  providedIn: 'root',
+})
+export class ExampleDataService {
+  getData() {
+    return DATA;
+  }
+}`;
+  code2 = `import { inject, Component } from "@angular/core";
+import { ExampleDataService } from "./exampledataservice.services.ts";
+
+@Component({...})
+export class SomeComponent {
+  private dataService = inject(ExampleDataService);
+}`;
+
+  code3 = `import { Component } from "@angular/core";
+import { ExampleDataService } from "./exampledataservice.services.ts";
+
+@Component({...})
+export class SomeComponent {
+  constructor(private dataService: ExampleDataService)
+}`;
+}
