@@ -26,6 +26,11 @@ body {
   margin: 0;
 }
 
+p {
+  line-height: 1.5em;
+  font-size: 0.9rem;
+}
+
 .codeblock {
   background-color: var(--background-color-2);
   border: 1px solid var(--border-color-1);

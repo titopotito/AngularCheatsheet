@@ -20,6 +20,13 @@ import { Component } from '@angular/core';
   ],
   template: `
     <h2>&#64;Component</h2>
+    <p>
+      Components are the main building blocks of Angular applications. Each
+      component represents a part of a larger web page. Organizing an
+      application into components helps provide structure to your project,
+      clearly separating code into specific parts that are easy to maintain and
+      grow over time.
+    </p>
     <h3>Component Metadata</h3>
     <table>
       <thead>
