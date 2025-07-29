@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { StyleThemeService } from '../../services/style-theme.services';
+import { StyleThemeService } from '../style-theme-button/style-theme.services';
 
 @Component({
   imports: [RouterLink, RouterLinkActive],

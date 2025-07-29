@@ -128,7 +128,7 @@ export class PageComponent {
     ],
   ];
 
-  code1 = `@Component({
+  code1: string = `@Component({
   selector: 'my-component',
   standalone: true,
   imports: [CommonModule],

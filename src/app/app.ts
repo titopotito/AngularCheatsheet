@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SharedLinkList } from './shared/link-list/link-list.component';
-import { StyleThemeService } from './services/style-theme.services';
+import { StyleThemeService } from './shared/style-theme-button/style-theme.services';
 import { SharedStyleThemeButton } from './shared/style-theme-button/style-theme-button.component';
 
 @Component({

@@ -10,6 +10,8 @@
   --background-color-2: #24292e;
   --border-color-1: rgb(116, 110, 124);
   --box-shadow-1: 0 5px 10px 3px rgb(87 101 128 / 12%);
+  --button-color-1: #0a47c2;
+  --button-color-2: var(--background-color-2);
 
   /* this part is used by style them button */
   --hue: 223;
@@ -38,4 +40,12 @@ code {
   background-color: var(--background-color-2);
   font-size: 0.9rem;
   line-height: 1.5rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }

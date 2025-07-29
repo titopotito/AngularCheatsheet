@@ -31,7 +31,7 @@ import { Highlight } from 'ngx-highlightjs';
   `,
 })
 export class PageInjectable {
-  code1 = `import { Injectable } from '@angular/core';
+  code1: string = `import { Injectable } from '@angular/core';
 import { DATA } from './sample-data';
 
 @Injectable({
@@ -44,7 +44,7 @@ export class ExampleDataService {
     return DATA;
   }
 }`;
-  code2 = `import { inject, Component } from "@angular/core";
+  code2: string = `import { inject, Component } from "@angular/core";
 import { ExampleDataService } from "./exampledataservice.services.ts";
 
 @Component({...})
@@ -52,7 +52,7 @@ export class SomeComponent {
   private dataService = inject(ExampleDataService);
 }`;
 
-  code3 = `import { Component } from "@angular/core";
+  code3: string = `import { Component } from "@angular/core";
 import { ExampleDataService } from "./exampledataservice.services.ts";
 
 @Component({...})

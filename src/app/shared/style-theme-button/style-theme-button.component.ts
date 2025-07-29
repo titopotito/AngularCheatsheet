@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import {
-  StyleThemeService,
-  StyleThemeType,
-} from '../../services/style-theme.services';
+import { StyleThemeService, StyleThemeType } from './style-theme.services';
 
 @Component({
   selector: 'shared-style-theme-button',
