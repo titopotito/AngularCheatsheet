@@ -5,6 +5,7 @@ import { PageAttributeDirectives } from './pages/attribute-directives.component'
 import { PageInjectable } from './pages/injectable.component';
 import { PageRouting } from './pages/routing/routing.component';
 import { PageHostBinding } from './pages/host-binding.component';
+import { PagePipes } from './pages/pipes';
 
 export const routes: Routes = [
   { path: '', component: PageInputOutputSignalModel },
@@ -14,4 +15,5 @@ export const routes: Routes = [
   { path: 'injectable', component: PageInjectable },
   { path: 'attribute-directives', component: PageAttributeDirectives },
   { path: 'routing', component: PageRouting },
+  { path: 'pipes', component: PagePipes },
 ];
