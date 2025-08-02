@@ -1,39 +1,33 @@
-import { Component, inject, signal, WritableSignal } from '@angular/core';
+import { Component, viewChild } from '@angular/core';
 import { Highlight } from 'ngx-highlightjs';
-import { StyleThemeService } from '../../shared/style-theme-button/style-theme.services';
 import { CODE_STRINGS } from './code_strings';
 import { SharedCopyButton } from '../../shared/copy-button/copy-button.component';
+import { SharedNavList } from '../../shared/nav-list/nav-list.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton],
+  imports: [Highlight, SharedCopyButton, SharedNavList],
   selector: 'page-routing',
   templateUrl: 'routing.component.html',
-  styleUrl: 'routing.component.css',
 })
 export class PageRouting {
   readonly CODE_STRINGS = CODE_STRINGS;
 
   readonly PAGE_SECTIONS = {
-    DEFINING_BASIC_ROUTE: 1,
-    GETTING_ROUTE_INFO: 2,
-    WILDCARD_ROUTE: 3,
-    REDIRECTS: 4,
-    NESTED_ROUTES: 5,
-    QUERY_PARAMS_AND_FRAGMENTS: 6,
-    LAZY_LOADING: 7,
+    DEFINING_BASIC_ROUTE: { navText: 'Defining a basic route', pageNum: 1 },
+    GETTING_ROUTE_INFO: { navText: 'Getting route information', pageNum: 2 },
+    WILDCARD_ROUTE: { navText: 'Wildcard routes', pageNum: 3 },
+    REDIRECTS: { navText: 'Setting up redirects', pageNum: 4 },
+    NESTED_ROUTES: { navText: 'Nested routes', pageNum: 5 },
+    QUERY_PARAMS_AND_FRAGMENTS: {
+      navText: 'Query params and fragments',
+      pageNum: 6,
+    },
+    LAZY_LOADING: { navText: 'Lazy loading', pageNum: 7 },
   } as const;
 
-  styleThemeService = inject(StyleThemeService);
+  navListComponent = viewChild(SharedNavList);
 
-  visibleSection: WritableSignal<number> = signal<number>(
-    this.PAGE_SECTIONS.DEFINING_BASIC_ROUTE
-  );
-
-  switchVisibleSection(visibleSection: number): void {
-    this.visibleSection.set(visibleSection);
-  }
-
-  isNavButtonActive(buttonNumber: number): 'active' | '' {
-    return this.visibleSection() === buttonNumber ? 'active' : '';
+  getVisibleSection() {
+    return this.navListComponent()?.visibleSection();
   }
 }

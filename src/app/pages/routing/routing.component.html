@@ -5,67 +5,10 @@
     instruction to change the view.
 </p>
 
-<nav>
-    <h3>Topics</h3>
-    <ul>
-    <li>
-        <button
-        (click)="switchVisibleSection(PAGE_SECTIONS.DEFINING_BASIC_ROUTE)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.DEFINING_BASIC_ROUTE)"
-        >
-        Defining a basic route
-        </button>
-    </li>
-    <li>
-        <button
-        (click)="switchVisibleSection(PAGE_SECTIONS.GETTING_ROUTE_INFO)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.GETTING_ROUTE_INFO)"
-        >
-        Getting route information
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.WILDCARD_ROUTE)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.WILDCARD_ROUTE)">
-        Wildcard routes
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.REDIRECTS)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.REDIRECTS)">
-        Setting up redirects
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.NESTED_ROUTES)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.NESTED_ROUTES)">
-        Nested routes
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.QUERY_PARAMS_AND_FRAGMENTS)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.QUERY_PARAMS_AND_FRAGMENTS)">
-        Query params and fragments
-        </button>
-    </li>
-       <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.LAZY_LOADING)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.LAZY_LOADING)">
-        Lazy loading
-        </button>
-    </li>
-    </ul>
-</nav>
+<shared-nav-list [navContent]="PAGE_SECTIONS"></shared-nav-list>
 
-@switch (visibleSection()) { 
-    @case (PAGE_SECTIONS.DEFINING_BASIC_ROUTE) {
+@switch (getVisibleSection()) { 
+    @case (PAGE_SECTIONS.DEFINING_BASIC_ROUTE.pageNum) {
         <section>
             <h3>Defining a basic route</h3>
             <p>1. Define your routes in your <code>Routes</code> array</p>
@@ -87,7 +30,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.BASIC_ROUTE3"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.GETTING_ROUTE_INFO) {
+    } @case (PAGE_SECTIONS.GETTING_ROUTE_INFO.pageNum) {
         <section>
             <h3>Getting route information</h3>
             <p>
@@ -108,7 +51,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.ROUTE_INFO2"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.WILDCARD_ROUTE) {
+    } @case (PAGE_SECTIONS.WILDCARD_ROUTE.pageNum) {
         <section>
             <h3>Wildcard routes</h3>
             <p>
@@ -120,7 +63,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.WILDCARD_ROUTE"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.REDIRECTS) {
+    } @case (PAGE_SECTIONS.REDIRECTS.pageNum) {
         <section>
             <h3>Setting up redirects</h3>
             <p>1. Static redirect with <code>pathMatch</code></p>
@@ -134,7 +77,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.REDIRECT2"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.NESTED_ROUTES) {
+    } @case (PAGE_SECTIONS.NESTED_ROUTES.pageNum) {
         <section>
             <h3>Nested routes</h3>
             <pre>
@@ -142,7 +85,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.NESTED_ROUTE"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.QUERY_PARAMS_AND_FRAGMENTS) {
+    } @case (PAGE_SECTIONS.QUERY_PARAMS_AND_FRAGMENTS.pageNum) {
         <section>
             <h3>Query params and fragments</h3>
             <p>1. In the component that you will <em>navigate FROM</em>:</p>
@@ -156,7 +99,7 @@
                 <shared-copy-button [codeToCopy]="CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS2"></shared-copy-button>
             </pre>
         </section>
-    } @case (PAGE_SECTIONS.LAZY_LOADING) {
+    } @case (PAGE_SECTIONS.LAZY_LOADING.pageNum) {
         <section>
             <h3>Lazy loading</h3>
             <pre>

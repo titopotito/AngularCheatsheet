@@ -1,44 +1,8 @@
 <h2>Signals, Input, Model, and Output Properties</h2>
-<nav>
-    <h3>Topics</h3>
-    <ul>
-    <li>
-        <button
-        (click)="switchVisibleSection(PAGE_SECTIONS.SIGNAL)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.SIGNAL)"
-        >
-        Signal
-        </button>
-    </li>
-    <li>
-        <button
-        (click)="switchVisibleSection(PAGE_SECTIONS.INPUT)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.INPUT)"
-        >
-        Input
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.MODEL)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.MODEL)">
-        Model
-        </button>
-    </li>
-    <li>
-        <button (click)="switchVisibleSection(PAGE_SECTIONS.OUTPUT)"
-        [class]="styleThemeService.styleTheme()"
-        [class.active]="isNavButtonActive(PAGE_SECTIONS.OUTPUT)">
-        Output
-        </button>
-    </li>
-    </ul>
-</nav>
+<shared-nav-list [navContent]="PAGE_SECTIONS"></shared-nav-list>
 
-@switch (visibleSection()) {
-  @case (PAGE_SECTIONS.SIGNAL) { 
+@switch (getVisibleSection()) {
+  @case (PAGE_SECTIONS.SIGNAL.pageNum) { 
     <section>
       <h3>Signal</h3>
       <p>
@@ -92,12 +56,12 @@
         </pre>
       </section>
     </section>
-  } @case (PAGE_SECTIONS.INPUT) {
+  } @case (PAGE_SECTIONS.INPUT.pageNum) {
     <section>
-      <h2>Input</h2>
+      <h3>Input</h3>
       <p>A component specifies the data that it accepts by declaring inputs.</p>
       <section>
-        <h3>Creating and using inputs</h3>
+        <h4>Creating and using inputs</h4>
         <pre>
             <code [highlight]="CODE_STRINGS.INPUT1" language="typescript"></code>
             <shared-copy-button></shared-copy-button>
@@ -113,9 +77,9 @@
         </p>
       </section>
     </section>
-  } @case (PAGE_SECTIONS.MODEL) {
+  } @case (PAGE_SECTIONS.MODEL.pageNum) {
     <section>
-      <h2>Model</h2>
+      <h3>Model</h3>
       <p>
         Model inputs are a special type of <code>input</code> that enable a
         component to propagate new values back to its parent component.
@@ -133,9 +97,9 @@
         <shared-copy-button></shared-copy-button>
       </pre>
     </section>
-  } @case (PAGE_SECTIONS.OUTPUT) {
+  } @case (PAGE_SECTIONS.OUTPUT.pageNum) {
     <section>
-      <h2>Output</h2>
+      <h3>Output</h3>
       <p>
         Angular components can define custom events by assigning a property to
         the <code>output</code> function.
@@ -156,7 +120,7 @@
         <code [highlight]="CODE_STRINGS.OUTPUT3" language="typescript"></code>
         <shared-copy-button></shared-copy-button>
       </pre>
-      <h3>Subscribing to outputs programmatically</h3>
+      <h4>Subscribing to outputs programmatically</h4>
       <p>
         Used when creating a component dynamically and you want to subscribed
         from it. The <code>OutputRef</code> type includes a
