@@ -1,12 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { SharedLinkList } from './shared/link-list/link-list.component';
+import { SharedLinkListComponent } from './shared/link-list/link-list.component';
 import { StyleThemeService } from './shared/style-theme-button/style-theme-button.services';
-import { SharedStyleThemeButton } from './shared/style-theme-button/style-theme-button.component';
+import { SharedStyleThemeButtonComponent } from './shared/style-theme-button/style-theme-button.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, SharedLinkList, SharedStyleThemeButton],
+  imports: [
+    RouterOutlet,
+    SharedLinkListComponent,
+    SharedStyleThemeButtonComponent,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })
