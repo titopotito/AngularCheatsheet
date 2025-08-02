@@ -15,19 +15,6 @@ main > div {
   justify-self: center;
 }
 
-pre {
-  overflow-x: scroll;
-}
-
-main.dark {
-  background-color: var(--background-color-1);
-  color: var(--font-color-1);
-}
-
-main.light code {
-  color: var(--font-color-1);
-}
-
 #main-header {
   grid-area: header;
   text-align: center;
@@ -47,4 +34,45 @@ main.light code {
 
 #main-nav ul {
   padding-left: 0;
+}
+
+main.dark {
+  background-color: var(--background-color-1);
+  color: var(--font-color-1);
+}
+
+/* main.light code {
+  color: var(--font-color-1);
+} */
+
+main.light ::ng-deep pre code {
+  border: 1px solid var(--border-color-1);
+}
+
+p {
+  line-height: 1.5em;
+  font-size: 0.9rem;
+}
+
+pre {
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+code {
+  font-family: "Fira Code", monospace;
+  font-size: small;
+  background-color: var(--background-color-2);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }

@@ -2,9 +2,10 @@ import { Component, inject, signal, WritableSignal } from '@angular/core';
 import { Highlight } from 'ngx-highlightjs';
 import { StyleThemeService } from '../../shared/style-theme-button/style-theme.services';
 import { CODE_STRINGS } from './code_strings';
+import { SharedCopyButton } from '../../shared/copy-button/copy-button.component';
 
 @Component({
-  imports: [Highlight],
+  imports: [Highlight, SharedCopyButton],
   selector: 'page-routing',
   templateUrl: 'routing.component.html',
   styleUrl: 'routing.component.css',

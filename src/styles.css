@@ -49,3 +49,9 @@ ul {
 li {
   list-style: none;
 }
+
+pre {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { Highlight } from 'ngx-highlightjs';
+import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
 
 @Component({
-  imports: [Highlight],
+  imports: [Highlight, SharedCopyButton],
   selector: 'page-attribute-directives',
   template: `<h2>Attribute Directives</h2>
     <p>
@@ -11,23 +12,35 @@ import { Highlight } from 'ngx-highlightjs';
     </p>
     <section>
       <h3>Building an Attribute Directive</h3>
-      <pre><code [highlight]="code1" language="typescript"></code></pre>
+      <pre>
+        <code [highlight]="code_str1" language="typescript"></code>
+        <shared-copy-button [codeToCopy]="code_str1"></shared-copy-button>
+    </pre>
     </section>
     <section>
       <h3>Using an Attribute Directive</h3>
       <h4>1. Declare in a Module</h4>
-      <pre><code [highlight]="code2" language="typescript"></code></pre>
+      <pre>
+        <code [highlight]="code_str2" language="typescript"></code>
+        <shared-copy-button [codeToCopy]="code_str2"></shared-copy-button>
+    </pre>
       <div>or</div>
       <h4>2. Import into a standalone component</h4>
-      <pre><code [highlight]="code3" language="typescript"></code></pre>
+      <pre>
+        <code [highlight]="code_str3" language="typescript"></code>
+        <shared-copy-button [codeToCopy]="code_str3"></shared-copy-button>
+    </pre>
     </section>
     <section>
       <h3>Applying an Attribute Directive</h3>
-      <pre><code [highlight]="code4" language="html"></code></pre>
+      <pre>
+        <code [highlight]="code_str4" language="html"></code>
+        <shared-copy-button [codeToCopy]="code_str4"></shared-copy-button>
+    </pre>
     </section>`,
 })
 export class PageAttributeDirectives {
-  code1: string = `import {Directive, ElementRef, inject} from '@angular/core';
+  code_str1: string = `import {Directive, ElementRef, inject} from '@angular/core';
 
 @Directive({
     selector: '[appHighlight]',
@@ -39,17 +52,17 @@ export class PageAttributeDirectives {
     }
 }`;
 
-  code2: string = `@NgModule({
+  code_str2: string = `@NgModule({
   declarations: [HighlightDirective],
   // ...
 })
 export class AppModule {}`;
 
-  code3: string = `@Component({
+  code_str3: string = `@Component({
   standalone: true,
   imports: [CommonModule, HighlightDirective],
   // ...
 })`;
 
-  code4: string = `<p appHighlight>Highlight me!</p>`;
+  code_str4: string = `<p appHighlight>Highlight me!</p>`;
 }
