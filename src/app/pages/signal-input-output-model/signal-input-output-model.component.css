@@ -1,0 +1,29 @@
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+nav button {
+  border: none;
+  outline: none;
+  padding: 10px;
+}
+
+nav button.dark {
+  color: var(--font-color-1);
+  background-color: var(--button-color-2);
+}
+
+nav button.dark.active {
+  background-color: var(--button-color-1);
+}
+
+nav button.light.active {
+  color: var(--font-color-1);
+  background-color: var(--button-color-1);
+}
+
+nav button:hover {
+  cursor: pointer;
+}

@@ -1,5 +1,6 @@
 li {
   list-style: none;
+  overflow-x: hidden;
 }
 
 li:hover {
@@ -8,11 +9,14 @@ li:hover {
 }
 
 li a {
+  box-sizing: border-box;
   padding: 10px;
   display: inline-block;
   width: 100%;
   text-decoration: none;
   text-wrap: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
 
 li.dark a {

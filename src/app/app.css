@@ -5,7 +5,7 @@ main {
 
 main > div {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 200px 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas: "header header" "nav content";
   box-sizing: border-box;
@@ -23,6 +23,7 @@ main > div {
 #main-nav {
   grid-area: nav;
   padding: 10px;
+  overflow-x: hidden;
 }
 
 #main-content {
