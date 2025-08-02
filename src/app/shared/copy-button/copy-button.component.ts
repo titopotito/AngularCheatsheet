@@ -26,7 +26,7 @@ import { Component, input, InputSignal } from '@angular/core';
     `,
   ],
 })
-export class SharedCopyButton {
+export class SharedCopyButtonComponent {
   codeToCopy: InputSignal<string> = input<string>('');
 
   copyCode(event: Event, code_str: string): void {

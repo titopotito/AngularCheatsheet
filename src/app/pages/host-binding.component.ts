@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { SharedPreWithCopyButtonComponent } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [SharedPreWithCopyButton],
-  selector: 'page-host-binding',
+  imports: [SharedPreWithCopyButtonComponent],
+  selector: 'host-binding-page',
   template: `<h2>Host Binding</h2>
     <section>
       <h3>Using host property of Component</h3>
@@ -45,7 +45,7 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
       </p>
     </section>`,
 })
-export class PageHostBinding {
+export class HostBindingPageComponent {
   code_str1 = `@Component({
   ...,
   host: {

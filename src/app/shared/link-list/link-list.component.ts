@@ -1,6 +1,6 @@
 import { Component, input } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { StyleThemeService } from '../style-theme-button/style-theme.services';
+import { StyleThemeService } from '../style-theme-button/style-theme-button.services';
 
 @Component({
   imports: [RouterLink, RouterLinkActive],
@@ -12,7 +12,7 @@ import { StyleThemeService } from '../style-theme-button/style-theme.services';
   </li>`,
   styleUrl: 'link-list.component.css',
 })
-export class SharedLinkList {
+export class SharedLinkListComponent {
   link = input.required<string>();
 
   constructor(public styleThemeService: StyleThemeService) {}

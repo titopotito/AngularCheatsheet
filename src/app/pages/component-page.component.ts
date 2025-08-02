@@ -1,10 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { SharedPreWithCopyButtonComponent } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [CommonModule, SharedPreWithCopyButton],
-  selector: 'page-component',
+  imports: [CommonModule, SharedPreWithCopyButtonComponent],
+  selector: 'component-page',
   styles: [
     `
       table {
@@ -28,6 +28,11 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
       clearly separating code into specific parts that are easy to maintain and
       grow over time.
     </p>
+    <h3>Example:</h3>
+    <shared-pre-with-copy-button
+      [code]="code_str"
+      [lang]="'typescript'"
+    ></shared-pre-with-copy-button>
     <h3>Component Metadata</h3>
     <table>
       <thead>
@@ -47,14 +52,9 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
         </tr>
       </tbody>
     </table>
-    <h3>Example:</h3>
-    <shared-pre-with-copy-button
-      [code]="code_str"
-      [lang]="'typescript'"
-    ></shared-pre-with-copy-button>
   `,
 })
-export class PageComponent {
+export class ComponentPageComponent {
   metadataTable: [string, string, string][] = [
     [
       'selector',

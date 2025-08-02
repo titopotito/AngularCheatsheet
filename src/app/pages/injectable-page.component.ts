@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { SharedPreWithCopyButtonComponent } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [SharedPreWithCopyButton],
-  selector: 'page-injectable',
+  imports: [SharedPreWithCopyButtonComponent],
+  selector: 'injectable-page',
   template: `
     <h2>&#64;Injectable</h2>
     <p>
@@ -38,7 +38,7 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
     ></shared-pre-with-copy-button>
   `,
 })
-export class PageInjectable {
+export class InjectablePageComponent {
   code_str1: string = `import { Injectable } from '@angular/core';
 import { DATA } from './sample-data';
 

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { SharedPreWithCopyButtonComponent } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [SharedPreWithCopyButton],
-  selector: 'page-attribute-directives',
+  imports: [SharedPreWithCopyButtonComponent],
+  selector: 'attribute-directives-page',
   template: `<h2>Attribute Directives</h2>
     <p>
       Change the appearance or behavior of DOM elements and Angular components
@@ -38,7 +38,7 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
       ></shared-pre-with-copy-button>
     </section>`,
 })
-export class PageAttributeDirectives {
+export class AttributeDirectivesPageComponent {
   code_str1: string = `import {Directive, ElementRef, inject} from '@angular/core';
 
 @Directive({

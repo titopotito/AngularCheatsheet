@@ -1,16 +1,16 @@
 import { Component, input, InputSignal } from '@angular/core';
-import { SharedCopyButton } from '../copy-button/copy-button.component';
+import { SharedCopyButtonComponent } from '../copy-button/copy-button.component';
 import { Highlight } from 'ngx-highlightjs';
 
 @Component({
-  imports: [Highlight, SharedCopyButton],
+  imports: [Highlight, SharedCopyButtonComponent],
   selector: 'shared-pre-with-copy-button',
   template: `<pre>
         <code [highlight]="code()" language={{lang()}}></code>
         <shared-copy-button [codeToCopy]="code()"></shared-copy-button>
     </pre>`,
 })
-export class SharedPreWithCopyButton {
+export class SharedPreWithCopyButtonComponent {
   code: InputSignal<string> = input.required<string>();
   lang: InputSignal<'typescript' | 'html'> = input.required<
     'typescript' | 'html'

@@ -8,7 +8,7 @@ import {
   Signal,
   WritableSignal,
 } from '@angular/core';
-import { StyleThemeService } from '../style-theme-button/style-theme.services';
+import { StyleThemeService } from '../style-theme-button/style-theme-button.services';
 
 type NavContentArrayType = { navText: string; pageNum: number }[];
 
@@ -36,7 +36,7 @@ export type NavContentType =
   </nav>`,
   styleUrl: 'nav-list.component.css',
 })
-export class SharedNavList {
+export class SharedNavListComponent {
   styleThemeService = inject(StyleThemeService);
 
   // You must use viewChild() at the parent component and access visibleSection property

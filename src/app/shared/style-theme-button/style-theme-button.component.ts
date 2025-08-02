@@ -1,12 +1,15 @@
 import { Component } from '@angular/core';
-import { StyleThemeService, StyleThemeType } from './style-theme.services';
+import {
+  StyleThemeService,
+  StyleThemeType,
+} from './style-theme-button.services';
 
 @Component({
   selector: 'shared-style-theme-button',
   templateUrl: 'style-theme-button.component.html',
   styleUrl: 'style-theme-button.component.css',
 })
-export class SharedStyleThemeButton {
+export class SharedStyleThemeButtonComponent {
   constructor(public styleThemeService: StyleThemeService) {}
 
   changeTheme(event: Event) {

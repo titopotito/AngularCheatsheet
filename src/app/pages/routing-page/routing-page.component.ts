@@ -1,14 +1,14 @@
 import { Component, viewChild } from '@angular/core';
-import { CODE_STRINGS } from './code_strings';
-import { SharedNavList } from '../../shared/nav-list/nav-list.component';
-import { SharedPreWithCopyButton } from '../../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { CODE_STRINGS } from './routing-page.code-strings';
+import { SharedNavListComponent } from '../../shared/nav-list/nav-list.component';
+import { SharedPreWithCopyButtonComponent } from '../../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [SharedPreWithCopyButton, SharedNavList],
-  selector: 'page-routing',
-  templateUrl: 'routing.component.html',
+  imports: [SharedPreWithCopyButtonComponent, SharedNavListComponent],
+  selector: 'routing-page',
+  templateUrl: 'routing-page.component.html',
 })
-export class PageRouting {
+export class RoutingPageComponent {
   readonly CODE_STRINGS = CODE_STRINGS;
 
   readonly PAGE_SECTIONS = {
@@ -24,7 +24,7 @@ export class PageRouting {
     LAZY_LOADING: { navText: 'Lazy loading', pageNum: 7 },
   } as const;
 
-  navListComponent = viewChild(SharedNavList);
+  navListComponent = viewChild(SharedNavListComponent);
 
   getVisibleSection() {
     return this.navListComponent()?.visibleSection();

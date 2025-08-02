@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
+import { SharedPreWithCopyButtonComponent } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [SharedPreWithCopyButton],
-  selector: 'page-pipes',
+  imports: [SharedPreWithCopyButtonComponent],
+  selector: 'pipes-page',
   template: `<h2>Pipes</h2>
     <p>
       Pipes are a special operator in Angular template expressions that allows
@@ -142,7 +142,7 @@ import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with
       </table>
     </section>`,
 })
-export class PagePipes {
+export class PipesPageComponent {
   code_str1 = `import { Component } from '@angular/core';
 import { CurrencyPipe, DatePipe, TitleCasePipe } from '@angular/common';
 @Component({
