@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Highlight } from 'ngx-highlightjs';
-import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
+import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton],
+  imports: [SharedPreWithCopyButton],
   selector: 'page-host-binding',
   template: `<h2>Host Binding</h2>
     <section>
@@ -14,10 +13,10 @@ import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
         component's template, but instead defined with the host property in the
         &#64;Component decorator.
       </p>
-      <pre>
-        <code [highlight]='code_str1' language="typescript"></code>
-        <shared-copy-button [codeToCopy]="code_str1"></shared-copy-button>
-    </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str1"
+        [lang]="'typescript'"
+      ></shared-pre-with-copy-button>
     </section>
     <section>
       <h3>Using &#64;HostBinding and &#64;HostListener</h3>
@@ -33,10 +32,10 @@ import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
         &#64;HostListener lets you bind event listeners to the host element. The
         decorator accepts an event name and an optional array of arguments.
       </p>
-      <pre>
-        <code [highlight]='code_str2' language="typescript"></code>
-        <shared-copy-button [codeToCopy]="code_str2"></shared-copy-button>
-      </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str2"
+        [lang]="'typescript'"
+      ></shared-pre-with-copy-button>
       <p>
         <em
           >Always prefer using the host property over &#64;HostBinding and

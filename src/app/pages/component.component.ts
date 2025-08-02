@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Highlight } from 'ngx-highlightjs';
-import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
+import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [CommonModule, Highlight, SharedCopyButton],
+  imports: [CommonModule, SharedPreWithCopyButton],
   selector: 'page-component',
   styles: [
     `
@@ -49,10 +48,10 @@ import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
       </tbody>
     </table>
     <h3>Example:</h3>
-    <pre>
-      <code [highlight]='code_str' language="typescript"></code>
-      <shared-copy-button [codeToCopy]="code_str"></shared-copy-button>
-    </pre>
+    <shared-pre-with-copy-button
+      [code]="code_str"
+      [lang]="'typescript'"
+    ></shared-pre-with-copy-button>
   `,
 })
 export class PageComponent {

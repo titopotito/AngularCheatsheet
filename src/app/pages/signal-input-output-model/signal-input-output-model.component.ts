@@ -1,11 +1,10 @@
 import { Component, viewChild } from '@angular/core';
-import { SharedCopyButton } from '../../shared/copy-button/copy-button.component';
-import { Highlight } from 'ngx-highlightjs';
 import { CODE_STRINGS } from './code_strings';
 import { SharedNavList } from '../../shared/nav-list/nav-list.component';
+import { SharedPreWithCopyButton } from '../../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton, SharedNavList],
+  imports: [SharedPreWithCopyButton, SharedNavList],
   selector: 'page-input-output-signal-model',
   templateUrl: 'signal-input-output-model.component.html',
 })

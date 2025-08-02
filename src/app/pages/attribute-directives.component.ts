@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Highlight } from 'ngx-highlightjs';
-import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
+import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton],
+  imports: [SharedPreWithCopyButton],
   selector: 'page-attribute-directives',
   template: `<h2>Attribute Directives</h2>
     <p>
@@ -12,31 +11,31 @@ import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
     </p>
     <section>
       <h3>Building an Attribute Directive</h3>
-      <pre>
-        <code [highlight]="code_str1" language="typescript"></code>
-        <shared-copy-button [codeToCopy]="code_str1"></shared-copy-button>
-    </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str1"
+        [lang]="'typescript'"
+      ></shared-pre-with-copy-button>
     </section>
     <section>
       <h3>Using an Attribute Directive</h3>
       <h4>1. Declare in a Module</h4>
-      <pre>
-        <code [highlight]="code_str2" language="typescript"></code>
-        <shared-copy-button [codeToCopy]="code_str2"></shared-copy-button>
-    </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str2"
+        [lang]="'typescript'"
+      ></shared-pre-with-copy-button>
       <div>or</div>
       <h4>2. Import into a standalone component</h4>
-      <pre>
-        <code [highlight]="code_str3" language="typescript"></code>
-        <shared-copy-button [codeToCopy]="code_str3"></shared-copy-button>
-    </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str3"
+        [lang]="'typescript'"
+      ></shared-pre-with-copy-button>
     </section>
     <section>
       <h3>Applying an Attribute Directive</h3>
-      <pre>
-        <code [highlight]="code_str4" language="html"></code>
-        <shared-copy-button [codeToCopy]="code_str4"></shared-copy-button>
-    </pre>
+      <shared-pre-with-copy-button
+        [code]="code_str4"
+        [lang]="'html'"
+      ></shared-pre-with-copy-button>
     </section>`,
 })
 export class PageAttributeDirectives {

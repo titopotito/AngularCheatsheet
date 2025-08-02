@@ -1,9 +1,8 @@
 import { Component } from '@angular/core';
-import { Highlight } from 'ngx-highlightjs';
-import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
+import { SharedPreWithCopyButton } from '../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton],
+  imports: [SharedPreWithCopyButton],
   selector: 'page-injectable',
   template: `
     <h2>&#64;Injectable</h2>
@@ -18,26 +17,25 @@ import { SharedCopyButton } from '../shared/copy-button/copy-button.component';
       "root" injector) during the application bootstrap process.
     </p>
     <h3>Creating an Injectable Service</h3>
-    <pre>
-      <code [highlight]="code_str1" language="typescript"></code>
-      <shared-copy-button [codeToCopy]="code_str1"></shared-copy-button>
-    </pre>
+    <shared-pre-with-copy-button
+      [code]="code_str1"
+      [lang]="'typescript'"
+    ></shared-pre-with-copy-button>
     <h3>Injecting Services</h3>
     <p>
       The inject method can be used in both classes and functions, while the
       constructor method can naturally only be used in a class constructor.
     </p>
     <h4>1. Using <code>inject</code></h4>
-    <pre>
-      <code [highlight]="code_str2" language="typescript"></code>
-      <shared-copy-button [codeToCopy]="code_str2"></shared-copy-button>
-    </pre>
-
+    <shared-pre-with-copy-button
+      [code]="code_str2"
+      [lang]="'typescript'"
+    ></shared-pre-with-copy-button>
     <h4>2. Using constructor method</h4>
-    <pre>
-      <code [highlight]="code_str3" language="typescript"></code>
-      <shared-copy-button [codeToCopy]="code_str3"></shared-copy-button>
-    </pre>
+    <shared-pre-with-copy-button
+      [code]="code_str3"
+      [lang]="'typescript'"
+    ></shared-pre-with-copy-button>
   `,
 })
 export class PageInjectable {

@@ -12,23 +12,14 @@
         <section>
             <h3>Defining a basic route</h3>
             <p>1. Define your routes in your <code>Routes</code> array</p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.BASIC_ROUTE1' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.BASIC_ROUTE1"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.BASIC_ROUTE1' [lang]='"typescript"'></shared-pre-with-copy-button>
             <p>
             2. Add the <code>RouterLink</code>, <code>RouterLinkActive</code>, and
             <code>RouterOutlet</code> to the imports array of AppComponent.
             </p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.BASIC_ROUTE2' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.BASIC_ROUTE2"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.BASIC_ROUTE2' [lang]='"typescript"'></shared-pre-with-copy-button>
             <p>3. Add your routes to your application</p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.BASIC_ROUTE3' language='html'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.BASIC_ROUTE3"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.BASIC_ROUTE3' [lang]='"html"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.GETTING_ROUTE_INFO.pageNum) {
         <section>
@@ -38,18 +29,12 @@
             <code>provideRouter</code>
             method.
             </p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.ROUTE_INFO1' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.ROUTE_INFO1"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.ROUTE_INFO1' [lang]='"typescript"'></shared-pre-with-copy-button>
             <p>
             2. Update the component to have an Input matching the name of the
             parameter.
             </p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.ROUTE_INFO2' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.ROUTE_INFO2"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.ROUTE_INFO2' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.WILDCARD_ROUTE.pageNum) {
         <section>
@@ -58,54 +43,33 @@
             The two asterisks, **, indicate to Angular that this routes definition
             is a wildcard route.
             </p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.WILDCARD_ROUTE' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.WILDCARD_ROUTE"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.WILDCARD_ROUTE' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.REDIRECTS.pageNum) {
         <section>
             <h3>Setting up redirects</h3>
             <p>1. Static redirect with <code>pathMatch</code></p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.REDIRECT1' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.REDIRECT1"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.REDIRECT1' [lang]='"typescript"'></shared-pre-with-copy-button>
             <p>2. Redirect using a function</p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.REDIRECT2' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.REDIRECT2"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.REDIRECT2' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.NESTED_ROUTES.pageNum) {
         <section>
             <h3>Nested routes</h3>
-            <pre>
-                <code [highlight]='CODE_STRINGS.NESTED_ROUTE' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.NESTED_ROUTE"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.NESTED_ROUTE' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.QUERY_PARAMS_AND_FRAGMENTS.pageNum) {
         <section>
             <h3>Query params and fragments</h3>
             <p>1. In the component that you will <em>navigate FROM</em>:</p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS1' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS1"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS1' [lang]='"typescript"'></shared-pre-with-copy-button>
             <p>2. In the component that you will <em>navigate TO</em>:</p>
-            <pre>
-                <code [highlight]='CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS2' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS2"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.QUERY_PARAMS_AND_FRAGMENTS2' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @case (PAGE_SECTIONS.LAZY_LOADING.pageNum) {
         <section>
             <h3>Lazy loading</h3>
-            <pre>
-                <code [highlight]='CODE_STRINGS.LAZY_LOADING' language='typescript'></code>
-                <shared-copy-button [codeToCopy]="CODE_STRINGS.LAZY_LOADING"></shared-copy-button>
-            </pre>
+            <shared-pre-with-copy-button [code]='CODE_STRINGS.LAZY_LOADING' [lang]='"typescript"'></shared-pre-with-copy-button>
         </section>
     } @default {
         <section>Section does not exist.</section>

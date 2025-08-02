@@ -1,11 +1,10 @@
 import { Component, viewChild } from '@angular/core';
-import { Highlight } from 'ngx-highlightjs';
 import { CODE_STRINGS } from './code_strings';
-import { SharedCopyButton } from '../../shared/copy-button/copy-button.component';
 import { SharedNavList } from '../../shared/nav-list/nav-list.component';
+import { SharedPreWithCopyButton } from '../../shared/pre-with-copy-button/pre-with-copy-button.component';
 
 @Component({
-  imports: [Highlight, SharedCopyButton, SharedNavList],
+  imports: [SharedPreWithCopyButton, SharedNavList],
   selector: 'page-routing',
   templateUrl: 'routing.component.html',
 })

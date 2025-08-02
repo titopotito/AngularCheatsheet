@@ -55,19 +55,8 @@ p {
   font-size: 0.9rem;
 }
 
-pre {
-  overflow-x: scroll;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-code {
-  font-family: "Fira Code", monospace;
-  font-size: small;
-  background-color: var(--background-color-2);
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+main.light code {
+  color: var(--font-color-1);
 }
 
 ul {

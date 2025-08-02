@@ -17,31 +17,19 @@
           You create writable signals by calling the signal function with the
           signal's initial value
         </p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.SIGNAL1" language="typescript"></code>
-            <shared-copy-button ></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.SIGNAL1" [lang]="'typescript'"></shared-pre-with-copy-button>
         <p>You read a signal's value by calling its getter function</p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.SIGNAL2" language="typescript"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.SIGNAL2" [lang]="'typescript'"></shared-pre-with-copy-button>
         <p>
           To change the value of a writable signal, either
           <code>.set()</code> it directly.
         </p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.SIGNAL3" language="typescript"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.SIGNAL3" [lang]="'typescript'"></shared-pre-with-copy-button>
         <p>
           or use the <code>.update()</code> operation to compute a new value
           from the previous one.
         </p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.SIGNAL4" language="typescript"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.SIGNAL4" [lang]="'typescript'"></shared-pre-with-copy-button>
       </section>
       <section>
         <h4>Computed Signals</h4>
@@ -50,10 +38,7 @@
           other signals. You define computed signals using the computed function
           and specifying a derivation:
         </p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.SIGNAL5" language="typescript"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.SIGNAL5" [lang]="'typescript'"></shared-pre-with-copy-button>
       </section>
     </section>
   } @case (PAGE_SECTIONS.INPUT.pageNum) {
@@ -62,15 +47,9 @@
       <p>A component specifies the data that it accepts by declaring inputs.</p>
       <section>
         <h4>Creating and using inputs</h4>
-        <pre>
-            <code [highlight]="CODE_STRINGS.INPUT1" language="typescript"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.INPUT1" [lang]="'typescript'"></shared-pre-with-copy-button>
         <p>This lets you bind to the property in a template:</p>
-        <pre>
-            <code [highlight]="CODE_STRINGS.INPUT2" language="html"></code>
-            <shared-copy-button></shared-copy-button>
-        </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.INPUT2" [lang]="'html'"></shared-pre-with-copy-button>
         <p>
           If an input without a default value is not set, its value is
           <code>undefined</code>:
@@ -88,14 +67,8 @@
         To enable two-way binding between components, the child component must
         contain a <code>model</code> property.
       </p>
-      <pre>
-        <code [highlight]="CODE_STRINGS.MODEL1" language="typescript"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
-      <pre>
-        <code [highlight]="CODE_STRINGS.MODEL2" language="typescript"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.MODEL1" [lang]="'typescript'"></shared-pre-with-copy-button>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.MODEL2" [lang]="'typescript'"></shared-pre-with-copy-button>
     </section>
   } @case (PAGE_SECTIONS.OUTPUT.pageNum) {
     <section>
@@ -104,32 +77,20 @@
         Angular components can define custom events by assigning a property to
         the <code>output</code> function.
       </p>
-      <pre>
-        <code [highlight]="CODE_STRINGS.OUTPUT1" language="typescript"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
-      <pre>
-        <code [highlight]="CODE_STRINGS.OUTPUT2" language="html"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.OUTPUT1" [lang]="'typescript'"></shared-pre-with-copy-button>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.OUTPUT2" [lang]="'html'"></shared-pre-with-copy-button>
       <p>
         You can emit an event by calling the emit method on the
         <code>OutputEmitterRef</code>.
       </p>
-      <pre>
-        <code [highlight]="CODE_STRINGS.OUTPUT3" language="typescript"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.OUTPUT3" [lang]="'typescript'"></shared-pre-with-copy-button>
       <h4>Subscribing to outputs programmatically</h4>
       <p>
         Used when creating a component dynamically and you want to subscribed
         from it. The <code>OutputRef</code> type includes a
         <code>subscribe</code> and <code>unsubscribe</code> method.
       </p>
-      <pre>
-        <code [highlight]="CODE_STRINGS.OUTPUT4" language="typescript"></code>
-        <shared-copy-button></shared-copy-button>
-      </pre>
+        <shared-pre-with-copy-button [code]="CODE_STRINGS.OUTPUT4" [lang]="'typescript'"></shared-pre-with-copy-button>
     </section>
   } @default {
           <section>Section does not exist.</section>
