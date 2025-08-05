@@ -6,11 +6,6 @@ import { Component, input, InputSignal } from '@angular/core';
   template: `<button (click)="copyCode($event, codeToCopy())">copy</button>`,
   styles: [
     `
-      :host {
-        display: flex;
-        justify-content: flex-end;
-      }
-
       button {
         color: var(--font-color-1);
         background-color: var(--button-color-2);

@@ -9,6 +9,19 @@ import { Highlight } from 'ngx-highlightjs';
         <code [highlight]="code()" language={{lang()}}></code>
         <shared-copy-button [codeToCopy]="code()"></shared-copy-button>
     </pre>`,
+  styles: [
+    `
+      pre {
+        position: relative;
+      }
+
+      shared-copy-button {
+        position: absolute;
+        right: 0;
+        margin: 5px;
+      }
+    `,
+  ],
 })
 export class SharedPreWithCopyButtonComponent {
   code: InputSignal<string> = input.required<string>();

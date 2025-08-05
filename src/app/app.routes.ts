@@ -8,6 +8,7 @@ import { HostBindingPageComponent } from './pages/host-binding.component';
 import { PipesPageComponent } from './pages/pipes-page.component';
 import { FormsPageComponent } from './pages/forms-page.component';
 import { SetUpPageComponent } from './pages/set-up-page.component';
+import { HttpClientPageComponent } from './pages/http-client-page.component';
 
 export const routes: Routes = [
   { path: '', component: SetUpPageComponent },
@@ -23,4 +24,5 @@ export const routes: Routes = [
   { path: 'routing', component: RoutingPageComponent },
   { path: 'pipes', component: PipesPageComponent },
   { path: 'forms', component: FormsPageComponent },
+  { path: 'http-client', component: HttpClientPageComponent },
 ];
