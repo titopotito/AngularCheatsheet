@@ -12,7 +12,7 @@ import { Highlight } from 'ngx-highlightjs';
 })
 export class SharedPreWithCopyButtonComponent {
   code: InputSignal<string> = input.required<string>();
-  lang: InputSignal<'typescript' | 'html'> = input.required<
-    'typescript' | 'html'
+  lang: InputSignal<'typescript' | 'html' | 'bash'> = input.required<
+    'typescript' | 'html' | 'bash'
   >();
 }

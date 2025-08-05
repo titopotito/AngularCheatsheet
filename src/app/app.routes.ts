@@ -7,9 +7,11 @@ import { RoutingPageComponent } from './pages/routing-page/routing-page.componen
 import { HostBindingPageComponent } from './pages/host-binding.component';
 import { PipesPageComponent } from './pages/pipes-page.component';
 import { FormsPageComponent } from './pages/forms-page.component';
+import { SetUpPageComponent } from './pages/set-up-page.component';
 
 export const routes: Routes = [
-  { path: '', component: InputOutputSignalModelPageComponent },
+  { path: '', component: SetUpPageComponent },
+  { path: 'set-up', component: SetUpPageComponent },
   {
     path: 'signal-input-output-model',
     component: InputOutputSignalModelPageComponent,
